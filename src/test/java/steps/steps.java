@@ -16,7 +16,6 @@ public class steps {
         RestAssured.baseURI = "https://it-foundations.app.ap.assurity.cloud/";
         RestAssured.defaultParser = Parser.HTML;
         response = RestAssured.get("people/" + arg0);
-        response
 
 
     }
