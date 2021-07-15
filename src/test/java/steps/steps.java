@@ -14,8 +14,9 @@ public class steps {
     @When("I check the details of student {int}")
     public void iCheckTheDetailsOfStudent(int arg0) {
         RestAssured.baseURI = "https://it-foundations.app.ap.assurity.cloud/";
-        RestAssured.defaultParser = Parser.JSON;
+        RestAssured.defaultParser = Parser.HTML;
         response = RestAssured.get("people/" + arg0);
+        response
 
 
     }
