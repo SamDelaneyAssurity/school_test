@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,6 +14,7 @@ public class steps {
     @When("I check the details of student {int}")
     public void iCheckTheDetailsOfStudent(int arg0) {
         RestAssured.baseURI = "https://it-foundations.app.ap.assurity.cloud/";
+        RestAssured.defaultParser = Parser.JSON;
         response = RestAssured.get("people/" + arg0);
 
 
